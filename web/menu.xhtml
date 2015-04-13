@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <div id="nav">
+        <h:link rendered="#{thispage==1}" outcome="/index"><p class="selected">Prem JSF</p></h:link>
+        <h:link rendered="#{thispage!=1}" outcome="/index"><p>Prem JSF</p></h:link>
+      
+    </div>
+</ui:composition>
+
