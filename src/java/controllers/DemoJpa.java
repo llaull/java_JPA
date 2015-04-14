@@ -1,6 +1,7 @@
 package controllers;
 
 
+import entities.Client;
 import javax.annotation.Resource;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -29,12 +30,22 @@ public class DemoJpa {
     private UserTransaction userTransaction;
     
     public String testDatabase(){
-        String retVal = "Confirmation";
+        String retVal = "confirmation";
         
         try{
             
             userTransaction.begin();
+            ////////////////////////
+            ////////////////////////
             
+            
+            //insert
+            Client c = new Client();
+            c.setNom("toto555");
+            em.persist(c);
+            
+            ////////////////////////
+            ////////////////////////
             userTransaction.commit();
             
         } catch (NotSupportedException | SystemException | RollbackException | HeuristicMixedException | HeuristicRollbackException | SecurityException | IllegalStateException e){

@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/MyDocs/JAVASE/demo_jpa/web/error.xhtml</file>
             <file>file:/C:/MyDocs/JAVASE/demo_jpa/web/index_1.xhtml</file>
+            <file>file:/C:/MyDocs/JAVASE/demo_jpa/web/confirmation.xhtml</file>
             <file>file:/C:/MyDocs/JAVASE/demo_jpa/src/java/entities/Client.java</file>
             <file>file:/C:/MyDocs/JAVASE/demo_jpa/web/template.xhtml</file>
             <file>file:/C:/MyDocs/JAVASE/demo_jpa/web/header.xhtml</file>
+            <file>file:/C:/MyDocs/JAVASE/demo_jpa/src/java/controllers/DemoJpa.java</file>
         </group>
     </open-files>
 </project-private>
