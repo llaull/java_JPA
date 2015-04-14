@@ -20,6 +20,34 @@ public class Client implements Serializable {
     
     @Column(name="nom")
     private String nom;
+
+    /**
+     * @return the idClient
+     */
+    public Long getIdClient() {
+        return idClient;
+    }
+
+    /**
+     * @param idClient the idClient to set
+     */
+    public void setIdClient(Long idClient) {
+        this.idClient = idClient;
+    }
+
+    /**
+     * @return the nom
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * @param nom the nom to set
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
     
     
 }
