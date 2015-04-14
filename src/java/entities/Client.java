@@ -4,6 +4,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -20,6 +21,10 @@ public class Client implements Serializable {
     
     @Column(name="nom")
     private String nom;
+    
+    @OneToOne(mappedBy = "client")
+    private InfosLogin infosLogin;
+    
 
     /**
      * @return the idClient
@@ -47,6 +52,20 @@ public class Client implements Serializable {
      */
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    /**
+     * @return the infosLogin
+     */
+    public InfosLogin getInfosLogin() {
+        return infosLogin;
+    }
+
+    /**
+     * @param infosLogin the infosLogin to set
+     */
+    public void setInfosLogin(InfosLogin infosLogin) {
+        this.infosLogin = infosLogin;
     }
     
     
