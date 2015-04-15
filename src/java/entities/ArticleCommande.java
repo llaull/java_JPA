@@ -26,7 +26,7 @@ public class ArticleCommande implements Serializable {
     @Column(name = "idArticle")
     private Long idArticle;
     
-    @Column(name = "quantiteArticle")
+    //@Column(name = "quantiteArticle")
     private Long quantiteArticle;
     
     @JoinColumn(name="idCommande", referencedColumnName = "idCommande", insertable = false, updatable = false)
