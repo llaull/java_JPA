@@ -58,15 +58,15 @@ public class DemoJpa {
              c.setNom("zozo le blairo");
              em.merge(c);//merge = update (pas obligatoire le comit le fait)*/
             ////////////////// 1to1
-            InfosLogin il = new InfosLogin();
+            /*InfosLogin il = new InfosLogin();
              il = em.find(InfosLogin.class, 1l); //info login ID
-             System.out.println("-> " + il.getPass()+ " <-> " + il.getClient().getNom());
+             System.out.println("-> " + il.getPass()+ " <-> " + il.getClient().getNom());*/
             /*c = em.find(Client.class, 2l);
              System.out.println(c.getNom());
              System.out.println(c.getInfosLogin().getPass());
              */
-            
-           /* Query q = em.createQuery("SELECT a FROM ArticleCommande a WHERE a.idCommande = :idCommande");
+            /*
+            Query q = em.createQuery("SELECT a FROM ArticleCommande a WHERE a.idCommande = :idCommande");
             q.setParameter("idCommande", 1L);
             List<ArticleCommande> articles = q.getResultList();
 
@@ -87,8 +87,8 @@ public class DemoJpa {
             ArticleCommande ac = new ArticleCommande();
             ac = em.find(ArticleCommande.class, new CommandeArticlePK(1L,1L));
             System.out.println("article : " + ac.getArticle().getLabel());
-            System.out.println("cmd : " + ac.getCommande().getRefCommande());*/
-
+            System.out.println("cmd : " + ac.getCommande().getRefCommande());
+*/
             ////////////////////////
             ////////////////////////
             //userTransaction.commit();
