@@ -1,5 +1,6 @@
 package controllers;
 
+import entities.Client;
 import facades.TestFacade;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ import javax.inject.Named;
 public class TestController implements Serializable {
 
     private DataModel items2 = null;
+    private Client current;
 
     @EJB
     private TestFacade ejTestFacade;
@@ -43,10 +45,45 @@ public class TestController implements Serializable {
     }
 
     /**
+     *
+     * @return
+     */
+    public String prepareView() {
+
+        setCurrent((Client) getItems2().getRowData());
+        System.out.println("current" + getCurrent().getNom());
+
+        return "view";
+    }
+    
+
+    public Client getSelect() {
+        if (current == null) {
+            current = new Client();
+
+        }
+        return current;
+    }
+
+    /**
      * @return the ejTestFacade
      */
     public TestFacade getEjTestFacade() {
         return ejTestFacade;
+    }
+
+    /**
+     * @return the current
+     */
+    public Client getCurrent() {
+        return current;
+    }
+
+    /**
+     * @param current the current to set
+     */
+    public void setCurrent(Client current) {
+        this.current = current;
     }
 
 }

@@ -19,25 +19,27 @@
                         <h:commandLink value="test" action="#{testController.prepareListFruit()}"/>
 
                     </h:panelGrid>
-
-                    <h:form>
-                        <h:dataTable value="#{testController.items2}" var="item2" border="0">
-                            <h:column>
-                                <f:facet name="header">nom
-                                </f:facet>
-                                <h:outputText value="#{item2.nom}"/>
-                            </h:column>
-                            <h:column>
-                                <f:facet name="header">pass
-                                </f:facet>
-                                <h:outputText value="#{item2.idClient}"/>
-                            </h:column> 
-                            <f:facet name="header">-</f:facet>
-                            <h:commandLink action="#{testController.prepareListFruit()}" value="View"/>
-                        </h:dataTable>
-                    </h:form>
-
                 </h:form>
+                <h:form>
+                    <h:dataTable value="#{testController.items2}" var="item2" border="0">
+                        <h:column>
+                            <f:facet name="header">nom
+                            </f:facet>
+                            <h:outputText value="#{item2.nom}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">pass
+                            </f:facet>
+                            <h:outputText value="#{item2.idClient}"/>
+                        </h:column> 
+                        <h:column>
+                            <f:facet name="header">-</f:facet>
+                            <h:commandLink value="view" action="#{testController.prepareView()}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+
+
             </ui:define>
 
         </ui:composition>
