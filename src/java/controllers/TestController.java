@@ -21,6 +21,7 @@ import javax.inject.Named;
 public class TestController implements Serializable {
 
     private DataModel items2 = null;
+    private DataModel items3 = null;
     private Client current;
 
     @EJB
@@ -31,6 +32,18 @@ public class TestController implements Serializable {
         l = getEjTestFacade().lesFruits();
         System.out.println("-> " + l.size());
         return "index2";
+    }
+    
+
+    private DataModel createPageDataModel3() {
+        return new ListDataModel(getEjTestFacade().findAll3());
+    }
+
+    public DataModel getItems3() {
+        if (items3 == null) {
+            items3 = createPageDataModel3();
+        }
+        return items3;
     }
 
     private DataModel createPageDataModel2() {

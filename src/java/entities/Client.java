@@ -4,6 +4,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -13,6 +15,10 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="clients")
+@NamedQueries({
+    @NamedQuery(name = "Clients.findAll3", query = "SELECT c FROM Clients c"),
+    @NamedQuery(name = "Clients.findByIdClient", query = "SELECT c FROM Clients c WHERE c.idClient = :idClient"),
+    @NamedQuery(name = "Clients.findByNom", query = "SELECT c FROM Clients c WHERE c.nom = :nom")})
 public class Client implements Serializable {
     
     @Id

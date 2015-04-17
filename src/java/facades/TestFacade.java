@@ -17,6 +17,7 @@ public class TestFacade {
 
     @PersistenceContext
     private EntityManager em;
+    
 
     public List<Client> findAll3() {
         Query q = em.createNamedQuery("Client.findAll3");
